@@ -26,6 +26,9 @@ The system has four layers that data passes through sequentially:
 
 Human review closes the loop: if a story feels off in tone or accuracy, the fix points back to either refining the templates (knowledge base) or adjusting the prompt (generation layer).
 
+
+## Loom Demo Link
+https://www.loom.com/share/6e39367bdf01432e94519b76c731148a
 ---
 
 ## Setup Instructions
