@@ -57,7 +57,7 @@ pip install -r requirements.txt
 **4. Set your Anthropic API key.**
 
 ```bash
-export ANTHROPIC_API_KEY=your_key_here
+export GEMINI_API_KEY=your_key_here
 ```
 
 **5. Build the FAISS index from the narrative templates.**
