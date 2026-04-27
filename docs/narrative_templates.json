@@ -1,0 +1,158 @@
+[
+  {
+    "id": "archetype_high_opener",
+    "type": "archetype",
+    "subtype": "opening",
+    "text": "The player's first guess was bold and high, landing above three-quarters of the available range. They charged toward the upper end of possibility without hesitation. Write the opening as a declaration of confidence — reckless, ambitious, committed to the high end of the range from the very first move."
+  },
+  {
+    "id": "archetype_low_opener",
+    "type": "archetype",
+    "subtype": "opening",
+    "text": "The player's first guess was cautious and low, landing below one-quarter of the available range. They tested the lower waters first, starting near the bottom of the number line. Write the opening as a measured, careful step — hesitant, conservative, choosing to begin at the low end of possibilities."
+  },
+  {
+    "id": "archetype_midpoint_opener",
+    "type": "archetype",
+    "subtype": "opening",
+    "text": "The player's first guess landed near the midpoint of the range, between 40% and 60% of the way through. This is the binary search instinct — divide the range cleanly in half. Write the opening as a calm, tactical first move: surgical, deliberate, the choice of someone who knows the optimal strategy."
+  },
+  {
+    "id": "archetype_edge_opener",
+    "type": "archetype",
+    "subtype": "opening",
+    "text": "The player's first guess landed at or near the absolute edge of the allowed range — within the first or last few percent of all possibilities. An extreme, unusual opening. Write it as a peculiar, almost stubborn first choice, like someone picking a corner before the game has truly begun."
+  },
+  {
+    "id": "archetype_wanderer",
+    "type": "archetype",
+    "subtype": "opening",
+    "text": "The player's guesses jumped erratically across the range with no clear pattern — no systematic narrowing, no consistent direction. Wide swings and gut instinct drove the journey. Write the opening as chaotic and unpredictable, a story of pure intuition without method."
+  },
+  {
+    "id": "archetype_lucky_strike",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won in one or two attempts, beating enormous odds. The secret number fell almost immediately. Write the ending as a stroke of impossible luck — brief, shocking, almost anticlimactic. The game barely had time to begin before it was already over."
+  },
+  {
+    "id": "archetype_methodical_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won in three to five attempts, with guesses clearly converging on the answer — narrowing the range with each step. A clean, logical march toward the secret number. Write the climax as a satisfying conclusion to disciplined play: methodical, earned, the expected result of sound strategy."
+  },
+  {
+    "id": "archetype_nail_biting_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won on the very last allowed attempt, using every chance before finally succeeding. Victory was snatched from the edge of defeat. Write the ending as a last-second escape — breathless, desperate, triumphant only because there were no more chances to fail."
+  },
+  {
+    "id": "archetype_near_miss_loss",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player lost, but their final guess was within two or three of the secret number. They ran out of attempts just before the answer arrived. Write the loss as a tragedy of proximity — agonizingly close, the answer just out of reach when time ran out."
+  },
+  {
+    "id": "archetype_collapse_loss",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player lost despite having many attempts remaining, unable to converge on the answer. The guesses stayed scattered and the range stayed wide. Write the loss as a collapse of method — the answer was always findable, but the path to it was never found."
+  },
+  {
+    "id": "archetype_hard_fought_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won but the path was zigzagged — guessing too high, then too low, correcting repeatedly before finally landing on the answer. Every adjustment was a battle. Write the victory as hard-earned and exhausting, won through persistence and correction rather than clean execution."
+  },
+  {
+    "id": "archetype_hard_mode_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won on Hard difficulty, a wide range with very few allowed attempts. Succeeding here required real precision. Write the win with respect for the difficulty — this was not luck, this was skill under pressure, conquering a large range in limited moves."
+  },
+  {
+    "id": "archetype_easy_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player won on Easy difficulty, a small range with generous attempts. A first achievement, a tutorial completed. Write the win warmly and encouragingly — a solid start, a foundation built, the first step in a longer journey."
+  },
+  {
+    "id": "archetype_binary_search_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player's guesses formed a near-perfect binary search pattern — each guess roughly halving the remaining range, systematically closing in on the secret. Write the win as an algorithmic masterpiece, cold and precise, the work of someone who plays the game like a machine."
+  },
+  {
+    "id": "archetype_comeback_win",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player guessed too high repeatedly before finally pulling back and finding the answer in the lower range. They overcorrected, learned, and recovered. Write the win as a comeback story — a realization mid-game that changed everything, a turning point followed by a clean finish."
+  },
+  {
+    "id": "archetype_stubborn_loss",
+    "type": "archetype",
+    "subtype": "climax",
+    "text": "The player kept guessing in the same direction — repeatedly too high or repeatedly too low — without pivoting, and ran out of attempts moving the wrong way. Write the loss as a story of stubbornness: the right answer was always in the other direction, but the player never turned around."
+  },
+  {
+    "id": "genre_detective_1",
+    "type": "genre",
+    "genre": "detective",
+    "text": "Write in the style of classic hard-boiled detective noir. The player is a detective, the secret number is a suspect or a clue, each guess is an interrogation or a lead. The city is dark, the answers are elusive, and the truth costs something. Use short, punchy sentences. The tone is world-weary and precise."
+  },
+  {
+    "id": "genre_detective_2",
+    "type": "genre",
+    "genre": "detective",
+    "text": "Adopt a detective fiction voice — methodical, observational, slightly cynical. Each guess is evidence gathered. A win is the case cracked; a loss is the suspect who got away. The narrator sees patterns where others see chaos. Reference the numbers as clues, the range as the city's map."
+  },
+  {
+    "id": "genre_fantasy_1",
+    "type": "genre",
+    "genre": "fantasy",
+    "text": "Write in the style of epic fantasy. The player is a hero or a seeker, the secret number is an ancient oracle's answer or a hidden treasure, each guess is a trial or a vision. The tone is mythic and grand, with fate and prophecy woven through every move. Use vivid, poetic language."
+  },
+  {
+    "id": "genre_fantasy_2",
+    "type": "genre",
+    "genre": "fantasy",
+    "text": "Adopt a fantasy oracle or wizard's voice. The numbers are runes or cosmic coordinates. A win means the spell was completed; a loss means the magic faded before the answer was found. Reference the range as 'the realm of possibilities' and each guess as a step through enchanted fog."
+  },
+  {
+    "id": "genre_scifi_1",
+    "type": "genre",
+    "genre": "scifi",
+    "text": "Write in the style of science fiction — clinical, technical, with a sense of vast systems at work. The player is an operator or AI, the secret number is a target coordinate or system parameter, each guess is a scan or a probe. Use the language of data, sensors, and probability. Precision is everything."
+  },
+  {
+    "id": "genre_scifi_2",
+    "type": "genre",
+    "genre": "scifi",
+    "text": "Adopt a sci-fi computer log or mission report voice. Each guess is a telemetry ping. A win is target acquisition confirmed; a loss is mission failure logged. Reference the range as the search space, the attempts as processing cycles, and the outcome as a final system status."
+  },
+  {
+    "id": "genre_sports_1",
+    "type": "genre",
+    "genre": "sports",
+    "text": "Write in the style of a live sports broadcast — energetic, immediate, in the moment. The player is an athlete, each guess is a play or a shot, the win is the buzzer-beater or the final score. Use sports metaphors: field position, time on the clock, the crowd's reaction. Keep the energy high."
+  },
+  {
+    "id": "genre_sports_2",
+    "type": "genre",
+    "genre": "sports",
+    "text": "Adopt a post-game sports analysis voice — reflecting on the player's performance, breaks down the strategy, discusses what worked and what didn't. Reference the number of attempts like quarter scores, and frame the outcome as a victory or defeat on the field of competition."
+  },
+  {
+    "id": "genre_neutral_1",
+    "type": "genre",
+    "genre": "neutral",
+    "text": "Write in a clear, engaging narrative style — neither genre-specific nor technical. The player is the protagonist, the secret number is the goal, and each guess is a step in a journey. The tone is warm, human, and reflective. Focus on the emotional arc: anticipation, uncertainty, and resolution."
+  },
+  {
+    "id": "genre_neutral_2",
+    "type": "genre",
+    "genre": "neutral",
+    "text": "Adopt a storyteller's voice — conversational, vivid, grounded in the actual numbers and events of the game. Describe what happened as though recounting it to a friend: what the player tried, how close they got, and how it ended. Keep it honest and specific, letting the game data carry the drama."
+  }
+]

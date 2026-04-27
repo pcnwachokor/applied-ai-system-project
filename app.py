@@ -1,5 +1,6 @@
 import random
 import streamlit as st
+from narrator import generate_game_story
 
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
@@ -90,6 +91,20 @@ low, high = get_range_for_difficulty(difficulty)
 st.sidebar.caption(f"Range: {low} to {high}")
 st.sidebar.caption(f"Attempts allowed: {attempt_limit}")
 
+if (
+    "current_difficulty" in st.session_state
+    and st.session_state.current_difficulty != difficulty
+):
+    st.session_state.secret = random.randint(low, high)
+    st.session_state.attempts = 0
+    st.session_state.score = 0
+    st.session_state.status = "playing"
+    st.session_state.history = []
+    st.session_state.story = ""
+    st.session_state.story_score = 0.0
+
+st.session_state.current_difficulty = difficulty
+
 if "secret" not in st.session_state:
     st.session_state.secret = random.randint(low, high)
 
@@ -104,6 +119,15 @@ if "status" not in st.session_state:
 
 if "history" not in st.session_state:
     st.session_state.history = []
+
+if "story" not in st.session_state:
+    st.session_state.story = ""
+
+if "story_score" not in st.session_state:
+    st.session_state.story_score = 0.0
+
+if "show_balloons" not in st.session_state:
+    st.session_state.show_balloons = False
 
 st.subheader("Make a guess")
 
@@ -138,14 +162,52 @@ if new_game:
     st.session_state.status = "playing"
     st.session_state.score = 0
     st.session_state.history = []
+    st.session_state.story = ""
+    st.session_state.story_score = 0.0
     st.success("New game started.")
     st.rerun()
 
 if st.session_state.status != "playing":
     if st.session_state.status == "won":
-        st.success("You already won. Start a new game to play again.")
+        if st.session_state.show_balloons:
+            st.balloons()
+            st.session_state.show_balloons = False
+        st.success(
+            f"🎉 You won! The secret was {st.session_state.secret}. "
+            f"Final score: {st.session_state.score}"
+        )
     else:
-        st.error("Game over. Start a new game to try again.")
+        st.error(
+            f"Out of attempts! The secret was {st.session_state.secret}. "
+            f"Score: {st.session_state.score}"
+        )
+
+    with st.expander("📖 Read Your Story", expanded=True):
+        genre = st.selectbox(
+            "Choose a genre:",
+            ["Detective", "Fantasy", "Sci-Fi", "Sports", "Neutral"],
+            key="genre_select",
+        )
+        if st.button("Generate Story ✨"):
+            with st.spinner("Writing your story..."):
+                story, score = generate_game_story(
+                    history=st.session_state.history,
+                    secret=st.session_state.secret,
+                    status=st.session_state.status,
+                    difficulty=difficulty,
+                    score=st.session_state.score,
+                    genre=genre,
+                    low=low,
+                    high=high,
+                    attempt_limit=attempt_limit,
+                )
+                st.session_state.story = story
+                st.session_state.story_score = score
+
+        if st.session_state.story:
+            st.markdown(f"> {st.session_state.story}")
+            st.caption(f"Retrieval confidence: {st.session_state.story_score:.2f}")
+
     st.stop()
 
 if submit:
@@ -169,20 +231,13 @@ if submit:
         )
 
         if outcome == "Win":
-            st.balloons()
             st.session_state.status = "won"
-            st.success(
-                f"You won! The secret was {st.session_state.secret}. "
-                f"Final score: {st.session_state.score}"
-            )
+            st.session_state.show_balloons = True
+            st.rerun()
         else:
             if st.session_state.attempts >= attempt_limit:
                 st.session_state.status = "lost"
-                st.error(
-                    f"Out of attempts! "
-                    f"The secret was {st.session_state.secret}. "
-                    f"Score: {st.session_state.score}"
-                )
+                st.rerun()
 
 st.divider()
 st.caption("Built by an AI that claims this code is production-ready.")
